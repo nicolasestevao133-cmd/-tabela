@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cadastro de Aplicativos</title>
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>Cadastro de Aplicativos</h1>
+        <p class="subtitulo">Gerencie seus aplicativos favoritos.</p>
+
+        <section class="card">
+            <h2>Novo aplicativo</h2>
+
+            <form id="formAplicativo">
+
+                <input type="text" id="nome"
+                    placeholder="Nome do aplicativo" required>
+
+                <input type="text" id="categoria"
+                    placeholder="Categoria" required>
+
+                <button type="submit">Cadastrar aplicativo</button>
+
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Lista de aplicativos</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Nome</th>
+                        <th>Categoria</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="corpoTabela"></tbody>
+
+            </table>
+        </section>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

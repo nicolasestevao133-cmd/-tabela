@@ -1,0 +1,176 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+h1 {
+    color: #172554;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 13px;
+    border: 1px solid #dbe2ea;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #4568e8;
+}
+
+button {
+    padding: 13px;
+    background: #4568e8;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3454ce;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 12px;
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+tr:hover {
+    background: #f8faff;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 25px 12px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 10px 6px;
+    }
+}
+
+h1 {
+    color: #172554;
+    font-size: 28px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtitulo {
+    color: #64748b;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.btnExcluir {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btnExcluir:hover {
+    background-color: #fecaca;
+}
+
+/* ANIMAÇÃO DE DESINTEGRAÇÃO */
+
+@keyframes desintegrar {
+    0% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        filter: blur(0);
+    }
+
+    30% {
+        opacity: 0.8;
+        transform: scale(0.98) rotate(-1deg);
+        filter: blur(1px);
+    }
+
+    70% {
+        opacity: 0.3;
+        transform: scale(0.85) rotate(3deg);
+        filter: blur(4px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(8deg);
+        filter: blur(10px);
+    }
+}
+
+.desintegrando {
+    animation: desintegrar 0.65s ease-in forwards;
+    pointer-events: none;
+}
